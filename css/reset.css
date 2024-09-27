@@ -7,15 +7,22 @@
 ul, li {
     list-style-type: none;
 }
-button {
+button,
+select {
     cursor: pointer;
 }
 button:focus,
-input:focus {
+input:focus,
+select:focus {
     outline: none;
 }
 button,
-input {
+input,
+select {
     font-size: inherit;
     font-family: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }

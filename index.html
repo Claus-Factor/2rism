@@ -7,6 +7,72 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav nav">
+                <div class="header__logo">
+                    <img src="./img/logo.svg" alt="Logo">
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__list-item nav__list-item--active"><a href="#">home</a></li>
+                    <li class="nav__list-item"><a href="#">hotels</a></li>
+                    <li class="nav__list-item"><a href="#">restaurants</a></li>
+                    <li class="nav__list-item"><a href="#">tours</a></li>
+                    <li class="nav__list-item"><a href="#">destinations</a></li>
+                    <li class="nav__list-item"><a href="#">activities</a></li>
+                    <li class="nav__list-item"><a href="#">contact</a></li>
+                </ul>
+                <div class="nav__user user">
+                    <div class="user__info">
+                        <span class="user__hello">Holla,</span><br>
+                        <span class="user__name">Ales Nesetril</span>
+                    </div>               
+                    <div class="user__avatar">
+                        <input type="image" src="./img/user.jpg" alt="User">
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header__title">
+                <h1>Discover the most engaging places</h1>
+                <button class="header__btn btn">Discover on 3D Globe</button>
+            </div>
+
+            <form action="" class="header__form form">
+                <label class="form__label form__label--location">
+                    <p>Location</p>
+                    <select name="location" id="location">
+                        <option value="">Explore nearby destinations</option>
+                    </select>
+                </label>
+
+                <label class="form__label form__label--activity">
+                    <p>Activity</p>
+                    <select name="activity" id="activity">
+                        <option value="">All Activities</option>
+                    </select>
+                </label>
+
+                <label class="form__label form__label--when">
+                    <p>When</p>
+                    <select name="when" id="when">
+                        <option value="">Choose a Date</option>
+                    </select>
+                </label>
+
+                <label class="form__label form__label--guests">
+                    <p>Guests</p>
+                    <select name="guests" id="guests">
+                        <option value="">1 guest</option>
+                    </select>
+                </label>
+               
+                <button type="submits" class="form__btn btn">
+                    <img src="./img/search.svg" alt="Search">
+                </button>
+            </form>
+
+        </div>
+    </header>
 </body>
 </html>
