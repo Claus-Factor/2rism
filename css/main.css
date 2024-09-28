@@ -1,16 +1,13 @@
 @import "./reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Глобальная стилизация */
 body {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: #161414;
 }
 body.no-overflow {
     overflow: hidden;
-    filter: grayscale(1);
-}
-.nav__user {
-    filter: grayscale(-1) !important;
 }
 .none {
     display: none;
@@ -21,17 +18,20 @@ body.no-overflow {
     padding-inline: var(--pad-inline);
     max-width: calc(1376px + 2*var(--pad-inline));
 }
+/* ************************************* */
 
+/* Стилизация шапки HEADER */
 .header {
     overflow: hidden;
     color: #fff;
-
+    
     height: 800px;
     border-radius: 0  0 54px 54px;
     padding-top: 31px;
     padding-bottom: 100px;
     position: relative;
 }
+
 .header::after {
     position: absolute;
     top: 0;
@@ -40,7 +40,7 @@ body.no-overflow {
     display: block;
     height: 100%;
     width: 100%;
-    background-image: url("./../img/header-bg.jpg");
+    background-image: url("./../img/header-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,6 +55,9 @@ body.no-overflow {
 .header__logo {
     cursor: pointer;
 }
+/* ************************************* */
+
+/* Навигационная панель в шапке */
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -62,7 +65,6 @@ body.no-overflow {
     line-height: 1.5;
     font-size: 14px;
 }
-
 .nav__list {
     display: flex;
     column-gap: 54px;
@@ -70,8 +72,6 @@ body.no-overflow {
 .nav__list {
     text-transform: capitalize;
 }
-
-
 .nav__list-item {
     opacity: 70%;
     font-weight: 300;
@@ -84,13 +84,12 @@ body.no-overflow {
 .nav__list-item:hover {
     opacity: 100%;
 }
-
 .nav__user {
     display: flex;
     align-items: center;
     column-gap: 8px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 .user__info {
     text-align: right;
@@ -101,9 +100,10 @@ body.no-overflow {
 .user__hello {
     opacity: 50%;
 }
-
 .user__avatar input[type="image"] {
+    width: 48px;
     border-radius: 50%;
+    z-index: 50;
 }
 .user__avatar::after {
     position: absolute;
@@ -117,6 +117,7 @@ body.no-overflow {
     background-color: #F00;
 }
 
+/* Заголовок и кнопка шапки */
 .header__title {
     text-align: center;
 }
@@ -147,157 +148,9 @@ body.no-overflow {
     display: inline-block;
     background-image: url("./../img/earth.svg");
 }
+/* ************************************* */
 
-.header__form {
-    font-size: 14px;
-    width: 1140px;
-    height: 88px;
-    margin: 0 auto;
-    color: #161414;
-    background-color: #fff;
-    border-radius: 12px;
-
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-@media (max-width: 1203px) {
-    .header__form {
-        max-width: 1040px;
-    }
-}
-@media (max-width: 1098px) {
-    .header__form {
-        max-width: 900px;
-        
-    }
-}
-
-
-
-.form__btn {
-    background-color: #7B61FF;
-    border-radius: 12px;
-    width: 60px;
-    height: 60px;
-    padding: 20px;
-}
-.btn {
-	position: relative;
-    transition: background-color 0.4s ease-in;
-}
-.btn:hover {
-    background-color: #6044ec;
-}
-.btn:active {
-
-	top: 2px;
-}
-
-
-.form select {
-    color: #161414;
-    font-weight: 500;
-}
-
-.form__label {
-    max-width: 300px;
-    font-weight: 300;
-    color: #5B5B5B;
-    padding-inline: 56px 20px;
-    position: relative;
-}
-.form__label::before {
-    position: absolute;
-    content: "";
-    top: 10px;
-    left: 19px;
-    width: 22px;
-    height: 22px;
-    display: inline-block;
-
-    background-repeat: no-repeat;
-}
-
-.form__label--location::before {
-    background-image: url("./../img/location.svg");
-}
-.form__label--activity::before {
-    background-image: url("./../img/activity.svg");
-}
-.form__label--when::before {
-    background-image: url("./../img/when.svg");
-}
-.form__label--guests::before {
-    background-image: url("./../img/guests.svg");
-}
-
-
-
-
-
-.destinations {
-    margin-top: 120px;
-}
-.destinations .container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 64px;
-}
-
-.destinations__examples {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 203px);
-    grid-auto-rows: 250px;
-    justify-content: space-between;
-
-}
-@media (max-width: 1280px) {
-    
-    .destinations__examples {
-        display: grid;
-        grid-template-columns: repeat(5, 203px);
-    }
-}
-@media (max-width: 1080px) {
-    .destinations__examples {
-        display: grid;
-        grid-template-columns: repeat(4, 203px);
-    }
-}
-@media (max-width: 866px) {
-    .destinations__examples {
-        display: grid;
-        grid-template-columns: repeat(3, 203px);
-    }
-}
-@media (max-width: 640px) {
-    .destinations__examples {
-        display: grid;
-        grid-template-columns: repeat(2, 203px);
-    }
-}
-@media (max-width: 438px) {
-    .destinations__examples {
-        display: grid;
-        grid-template-columns: repeat(1, 203px);
-    }
-}
-
-.destinations h2 {
-    font-size: 32px;
-    font-weight: 600;
-}
-.destinations__location h3 {
-    margin-top: 8px;
-    font-weight: 500;
-    font-size: 16px;
-}
-.destinations__location p {
-    color: #979797;
-    font-size: 13px;
-}
+/* Мобильная адаптация раскрывающегося списка */
 .menu {
     --s: 30px; /* control the size */
     --c: #fff; /* the color */
@@ -372,14 +225,13 @@ body.no-overflow {
         display: block;
     }
 }
-
 .nav__mobile-list {
     background-color: #282828;
     position: absolute;
     top: 0;
     right: 0;
     max-width: 370px;
-    height: 100%;
+    height: 100vh;
     z-index: 1;
 
     padding-top: 100px;
@@ -388,4 +240,416 @@ body.no-overflow {
     font-size: 25px;
     text-transform: capitalize;
     line-height: 2;
+    color: #fff;
 }
+/* ************************************* */
+
+/* Форма в шапке */
+.form__btn {
+    background-color: #7B61FF;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+}
+.btn {
+	position: relative;
+    transition: background-color 0.4s ease-in;
+}
+.btn:hover {
+    background-color: #6044ec;
+}
+.btn:active {
+
+	top: 2px;
+}
+.header__form {
+    font-size: 14px;
+    width: 1140px;
+    height: 88px;
+    margin: 0 auto;
+    color: #161414;
+    background-color: #fff;
+    border-radius: 12px;
+
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form select {
+    color: #161414;
+    font-weight: 500;
+}
+
+.form__label {
+    max-width: 300px;
+    font-weight: 300;
+    color: #5B5B5B;
+    padding-inline: 56px 20px;
+    position: relative;
+}
+.form__label::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 19px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+
+    background-repeat: no-repeat;
+}
+@media (max-width: 1203px) {
+    .header__form {
+        max-width: 1040px;
+    }
+}
+@media (max-width: 1098px) {
+    .header__form {
+        max-width: 900px;
+    }
+}
+@media (max-width: 955px) {
+    .header__form {
+        max-width: 830px;
+    }
+    .form__label {
+        padding-right: 0;
+    }
+}
+@media (max-width: 879px) {
+    .header__form {
+        flex-direction: column;
+        align-items: start;
+        max-width: 294px;
+        height: 300px;
+    }
+    .form__btn {
+        width: 100%;
+    }
+}
+@media (max-width: 490px) {
+    .header {
+        height: 950px;
+    }
+}
+@media (max-width: 355px) {
+    .header__form {
+        max-width: 210px;
+    }
+}
+
+
+.form__label--location::before {
+    background-image: url("./../img/location.svg");
+}
+.form__label--activity::before {
+    background-image: url("./../img/activity.svg");
+}
+.form__label--when::before {
+    background-image: url("./../img/when.svg");
+}
+.form__label--guests::before {
+    background-image: url("./../img/guests.svg");
+}
+/* ************************************* */
+
+/* Раздел Popular destinations*/
+.destinations {
+    margin-top: 120px;
+}
+.destinations .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+}
+
+.destinations__examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 203px);
+    grid-auto-rows: 250px;
+    justify-content: space-between;
+
+}
+@media (max-width: 1285px) {
+    
+    .destinations__examples {
+        display: grid;
+        grid-template-columns: repeat(5, 203px);
+    }
+}
+@media (max-width: 1085px) {
+    .destinations__examples {
+        display: grid;
+        grid-template-columns: repeat(4, 203px);
+    }
+}
+@media (max-width: 872px) {
+    .destinations__examples {
+        display: grid;
+        grid-template-columns: repeat(3, 203px);
+    }
+}
+@media (max-width: 666px) {
+    .destinations__examples {
+        display: grid;
+        grid-template-columns: repeat(2, 203px);
+    }
+}
+@media (max-width: 460px) {
+    .destinations__examples {
+        display: grid;
+        grid-template-columns: repeat(1, 203px);
+        justify-content: center;
+    }
+}
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #161414;
+}
+h3 {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #161414;
+}
+.destinations__location p {
+    color: #979797;
+    font-size: 13px;
+}
+/* ************************************* */
+
+/* Раздел Hotels and Restaurants */
+.hotels {
+    margin-top: 120px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+.hotels__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    justify-content: space-between;
+    grid-auto-rows: 475px;
+}
+.hotels__hotel img {
+    border-radius: 12px;
+}
+.view {
+    background-color: #F6F4FF;
+    color: #5243C2;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.4s ease-in;
+}
+.view:hover {
+    background-color: #dfdafa;
+}
+@media (max-width: 1340px) {
+    .hotels__gallery {
+        grid-template-columns: repeat(3, 320px);
+    }
+}
+@media (max-width: 1018px) {
+    .hotels__gallery {
+        grid-template-columns: repeat(2, 320px);
+    }
+}
+@media (max-width: 692px) {
+    .hotels__gallery {
+        grid-template-columns: repeat(1, 320px);
+        justify-content: center;
+    }
+}
+.hotel__location img {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.hotels__hotel h3 {
+    margin-bottom: 12px;
+}
+.hotels__hotel span {
+    color: #979797;
+    font-size: 13px;
+}
+
+.hotel__desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ************************************* */
+
+/* Звёздный рейтинг */
+svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 2px;
+  }
+  
+  
+  /* hide radio buttons */
+  
+  input[name="star"] {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    margin-left: -2px;
+  }
+  
+  /* hide source svg */
+  
+  .star-source {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  
+  /* set initial color to transparent so fill is empty*/
+  
+  .star {
+    color: transparent;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  
+  /* set direction to row-reverse so 5th star is at the end and ~ can be used to fill all sibling stars that precede last starred element*/
+  
+  .star-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  label:hover ~ label .star,
+  svg.star:hover,
+  input[name="star"]:focus ~ label .star,
+  input[name="star"]:checked ~ label .star {
+    color: #FFA800;
+  }
+  
+  input[name="star"]:checked + label .star {
+    animation: starred 0.5s;
+  }
+  
+  input[name="star"]:checked + label {
+    animation: scaleup 1s;
+  }
+  
+  @keyframes scaleup {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes starred {
+    from {
+      color: #c48301;
+    }
+    to {
+      color: #FFA800;
+    }
+  }
+
+/* ************************************* */
+
+/* Раздел Travel Tips and Advice */
+
+.travel {
+    margin-top: 120px;
+}
+.travel__place img {
+    border-radius: 24px;
+    width: 320px;
+    height: 380px;
+}
+.travel__place h3 {
+    font-weight: 600;
+    font-size: 20px
+}
+.travel__place p {
+    margin-top: 16px;
+    color: #5B5B5B;
+    line-height: 2;
+}
+.travel__place {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+}
+.place__desc {
+    max-width: 320px;
+}
+.travel__places {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 672px));
+    justify-content: space-between;
+    column-gap: 25px;
+}
+@media (max-width: 1290px) {
+    .travel__places {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: 400px auto;
+    }
+}
+@media (max-width: 660px) {
+    .travel__place {
+        flex-direction: column;
+    }
+    .travel__places {
+        grid-template-rows: auto auto;
+        row-gap: 32px;
+        justify-content: center;
+    }
+    .place__desc {
+        width: 500px;
+    }
+}
+/* ************************************* */
+
+
+
+/* Раздел Activities */
+
+.activities {
+    margin-top: 120px;
+}
+.activities__example img {
+    border-radius: 12px;
+}
+.activities__examples {
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    justify-content: space-between;
+    grid-auto-rows: 445px;
+}
+@media (max-width: 1353px) {
+    .activities__examples {
+        grid-template-columns: repeat(3, 320px);
+    }
+}
+@media (max-width: 1016px) {
+    .activities__examples {
+        grid-template-columns: repeat(2, 320px);
+    }
+}
+@media (max-width: 689px) {
+    .activities__examples {
+        grid-template-columns: repeat(1, 320px);
+        justify-content: center;
+    }
+}
+
+
+
+
+/* ************************************* */

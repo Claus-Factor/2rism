@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./img/icon.svg">
 </head>
 <body>
+    <ul class="nav__mobile-list none">
+        <li class="nav__list-item nav__list-item--active"><a href="#">home</a></li>
+        <li class="nav__list-item"><a href="#">hotels</a></li>
+        <li class="nav__list-item"><a href="#">restaurants</a></li>
+        <li class="nav__list-item"><a href="#">tours</a></li>
+        <li class="nav__list-item"><a href="#">destinations</a></li>
+        <li class="nav__list-item"><a href="#">activities</a></li>
+        <li class="nav__list-item"><a href="#">contact</a></li>
+    </ul>
+
     <header class="header">
         <div class="container">
             <nav class="header__nav nav">
@@ -15,28 +26,20 @@
                 </div>
                 <ul class="nav__list">
                     <li class="nav__list-item nav__list-item--active"><a href="#">home</a></li>
-                    <li class="nav__list-item"><a href="#">hotels</a></li>
-                    <li class="nav__list-item"><a href="#">restaurants</a></li>
-                    <li class="nav__list-item"><a href="#">tours</a></li>
-                    <li class="nav__list-item"><a href="#">destinations</a></li>
-                    <li class="nav__list-item"><a href="#">activities</a></li>
+                    <li class="nav__list-item"><a href="#hotels">hotels</a></li>
+                    <li class="nav__list-item"><a href="#hotels">restaurants</a></li>
+                    <li class="nav__list-item"><a href="#travel">tours</a></li>
+                    <li class="nav__list-item"><a href="#destinations">destinations</a></li>
+                    <li class="nav__list-item"><a href="#activities">activities</a></li>
                     <li class="nav__list-item"><a href="#">contact</a></li>
                 </ul>
-                <ul class="nav__mobile-list none">
-                    <li class="nav__list-item nav__list-item--active"><a href="#">home</a></li>
-                    <li class="nav__list-item"><a href="#">hotels</a></li>
-                    <li class="nav__list-item"><a href="#">restaurants</a></li>
-                    <li class="nav__list-item"><a href="#">tours</a></li>
-                    <li class="nav__list-item"><a href="#">destinations</a></li>
-                    <li class="nav__list-item"><a href="#">activities</a></li>
-                    <li class="nav__list-item"><a href="#">contact</a></li>
-                </ul>
+                
                 
                 <div class="nav__user user">
                     <input type="checkbox" role="button" aria-label="Display the menu" class="menu nav__btn">
                     <div class="user__info">
-                        <span class="user__hello">Holla,</span><br>
-                        <span class="user__name">Ales Nesetril</span>
+                        <span class="user__hello">Hello,</span><br>
+                        <span class="user__name">Nicholas Volkhin</span>
                     </div>               
                     <div class="user__avatar">
                         <input type="image" src="./img/user.jpg" alt="User">
@@ -53,7 +56,7 @@
                 <label class="form__label form__label--location">
                     <p>Location</p>
                     <select name="location" id="location">
-                        <option value="">Explore nearby destinations</option>
+                        <option value="">Explore nearby</option>
                     </select>
                 </label>
 
@@ -66,9 +69,7 @@
 
                 <label class="form__label form__label--when">
                     <p>When</p>
-                    <select name="when" id="when">
-                        <option value="">Choose a Date</option>
-                    </select>
+                    <input type="date" name="when" id="when">
                 </label>
 
                 <label class="form__label form__label--guests">
@@ -86,7 +87,7 @@
         </div>
     </header>
 
-    <section class="destinations">
+    <section class="destinations" id="destinations">
         <div class="container">
             <h2>Popular Destinations</h2>
             <div class="destinations__examples">
@@ -137,60 +138,310 @@
                         <p>Spain</p>
                     </div>
                 </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-0.jpg" alt="Location">
-                        <h3>Big Sur</h3>
-                        <p>California, USA</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-1.jpg" alt="Location">
-                        <h3>Prescott</h3>
-                        <p>Arizona, USA</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-2.jpg" alt="Location">
-                        <h3>Florida, USA</h3>
-                        <p>Florida, USA</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-3.jpg" alt="Location">
-                        <h3>Tucson</h3>
-                        <p>Arizona, USA</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-4.jpg" alt="Location">
-                        <h3>St. Joseph</h3>
-                        <p>Michigan, USA</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="destinations__location">
-                        <img src="./img/destinations/img-5.jpg" alt="Location">
-                        <h3>Madrid</h3>
-                        <p>Spain</p>
-                    </div>
-                </a>
-
+ 
             </div>
 
         </div>
     </section>
 
+    <section class="hotels" id="hotels">
+        <div class="container">
+            <div class="hotels__head head">
+                <h2>Hotels and Restaurants</h2>
+                <button class="hotels__view view">View all &#8594;</button>
+            </div>
+            <div class="hotels__gallery">
+                <div class="hotels__hotel hotel">
+                    <img src="./img/hotels/3-0.jpg" alt="Hotel">
+                    <h3>Monastero Santa Rosa Hotel & Spa</h3>
+                    <div class="hotel__desc">
+                        <div class="hotel__location">
+                            <img src="./img/hotels/location.svg" alt="Location"><span>Salerno, Italy</span>
+                        </div>
+                        <div class="hotel__stars">
+                            <div class="star-source">
+                                <svg>
+                                       <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+                                          <stop stop-color="#FFA800" offset="0%"></stop>
+                                          <stop stop-color="#FFA800" offset="60%"></stop>
+                                          <stop stop-color="#FFA800" offset="100%"></stop>
+                                      </linearGradient>
+                                  <symbol id="star" viewBox="153 89 106 108">   
+                                    <polygon id="star-shape" stroke="url(#grad)" stroke-width="10" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+                                  </symbol>
+                              </svg>
+                              
+                              </div>
+                              <div class="star-container">
+                                <input type="radio" name="star" id="five">
+                                <label for="five">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="four">
+                                <label for="four">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="three">
+                                <label for="three">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="two">
+                                <label for="two">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="one">
+                                <label for="one">
+                                 <svg class="star">
+                                  <use xlink:href="#star" />
+                                 </svg>
+                                </label>
+                              
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotels__hotel">
+                    <img src="./img/hotels/3-1.jpg" alt="Hotel">
+                    <h3>Monastero Santa Rosa Hotel & Spa</h3>
+                    <div class="hotel__desc">
+                        <div class="hotel__location">
+                            <img src="./img/hotels/location.svg" alt="Location"><span>Lake Como, Italy</span>
+                        </div>
+                        <div class="hotel__stars">
+                            <div class="star-source">
+                                <svg>
+                                       <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+                                          <stop stop-color="#FFA800" offset="0%"></stop>
+                                          <stop stop-color="#FFA800" offset="60%"></stop>
+                                          <stop stop-color="#FFA800" offset="100%"></stop>
+                                      </linearGradient>
+                                  <symbol id="star" viewBox="153 89 106 108">   
+                                    <polygon id="star-shape" stroke="url(#grad)" stroke-width="10" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+                                  </symbol>
+                              </svg>
+                              
+                              </div>
+                              <div class="star-container">
+                                <input type="radio" name="star" id="five">
+                                <label for="five">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="four">
+                                <label for="four">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="three">
+                                <label for="three">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="two">
+                                <label for="two">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="one">
+                                <label for="one">
+                                 <svg class="star">
+                                  <use xlink:href="#star" />
+                                 </svg>
+                                </label>
+                              
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotels__hotel">
+                    <img src="./img/hotels/3-2.jpg" alt="Hotel">
+                    <h3>The Oberoi Udaivilas, Udaipur</h3>
+                    <div class="hotel__desc">
+                        <div class="hotel__location">
+                            <img src="./img/hotels/location.svg" alt="Location"><span>Udaipur, India</span>
+                        </div>
+                        <div class="hotel__stars">
+                            <div class="star-source">
+                                <svg>
+                                       <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+                                          <stop stop-color="#FFA800" offset="0%"></stop>
+                                          <stop stop-color="#FFA800" offset="60%"></stop>
+                                          <stop stop-color="#FFA800" offset="100%"></stop>
+                                      </linearGradient>
+                                  <symbol id="star" viewBox="153 89 106 108">   
+                                    <polygon id="star-shape" stroke="url(#grad)" stroke-width="10" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+                                  </symbol>
+                              </svg>
+                              
+                              </div>
+                              <div class="star-container">
+                                <input type="radio" name="star" id="five">
+                                <label for="five">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="four">
+                                <label for="four">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="three">
+                                <label for="three">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="two">
+                                <label for="two">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="one">
+                                <label for="one">
+                                 <svg class="star">
+                                  <use xlink:href="#star" />
+                                 </svg>
+                                </label>
+                              
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotels__hotel">
+                    <img src="./img/hotels/3-3.jpg" alt="Hotel">
+                    <h3>AKA Beverly Hills</h3>
+                    <div class="hotel__desc">
+                        <div class="hotel__location">
+                            <img src="./img/hotels/location.svg" alt="Location"><span>Los Angeles, United States</span>
+                        </div>
+                        <div class="hotel__stars">
+                            <div class="star-source">
+                                <svg>
+                                       <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+                                          <stop stop-color="#FFA800" offset="0%"></stop>
+                                          <stop stop-color="#FFA800" offset="60%"></stop>
+                                          <stop stop-color="#FFA800" offset="100%"></stop>
+                                      </linearGradient>
+                                  <symbol id="star" viewBox="153 89 106 108">   
+                                    <polygon id="star-shape" stroke="url(#grad)" stroke-width="10" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+                                  </symbol>
+                              </svg>
+                              
+                              </div>
+                              <div class="star-container">
+                                <input type="radio" name="star" id="five">
+                                <label for="five">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="four">
+                                <label for="four">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="three">
+                                <label for="three">
+                                  <svg class="star">
+                                    <use xlink:href="#star"/>
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="two">
+                                <label for="two">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                                <input type="radio" name="star" id="one">
+                                <label for="one">
+                                 <svg class="star">
+                                  <use xlink:href="#star" />
+                                 </svg>
+                                </label>
+                              
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="travel" id="travel">
+        <div class="container">
+            <div class="head travel__head">
+                <h2>Travel Tips and Advice</h2>
+                <button class="view travel__view">View all &#8594;</button>
+            </div>
+
+            <div class="travel__places">
+                <div class="travel__place place">
+                    <img src="./img/travel/img1.jpg" alt="Place">
+                    <div class="place__desc">
+                        <h3>East Village Ice Cream Crawl</h3>
+                        <p>We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour tour. At each ice cream store we'll explore the story behind the business and see what makes the ice cream unique as you savor every…</p>
+                        <div class="place__info"></div>
+                    </div>
+                </div>
+
+                <div class="travel__place place">
+                    <img src="./img/travel/img2.jpg" alt="Place">
+                    <div class="place__desc">
+                        <h3>Brooklyn Bridge cinematic photo walk</h3>
+                        <p>This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but I'm always open to capture clients at different locations upon request for an additional charge.</p>
+                        <div class="place__info"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section class="activities" id="activities">
+        <div class="container">
+            <div class="head activities__head">
+                <h2>Activities</h2>
+                <button class="view activities__view">View all &#8594;</button>
+            </div>
+            <div class="activities__examples">
+                <div class="activities__example">
+                    <img src="./img/activities/img-0.jpg" alt="Activity">
+                    <h3>Sailing</h3>
+                </div>
+                <div class="activities__example">
+                    <img src="./img/activities/img-1.jpg" alt="Activity">
+                    <h3>Sailing</h3>
+                </div>
+                <div class="activities__example">
+                    <img src="./img/activities/img-2.jpg" alt="Activity">
+                    <h3>Sailing</h3>
+                </div>
+                <div class="activities__example">
+                    <img src="./img/activities/img-3.jpg" alt="Activity">
+                    <h3>Sailing</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <script src="./script.js"></script>
 </body>
