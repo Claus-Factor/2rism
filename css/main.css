@@ -338,6 +338,9 @@ body.no-overflow {
     .header__form {
         max-width: 210px;
     }
+    .header__title h1 {
+        font-size: 36px;
+    }
 }
 
 
@@ -363,6 +366,9 @@ body.no-overflow {
     display: flex;
     flex-direction: column;
     row-gap: 64px;
+}
+.destinations__examples img {
+    border-radius: 12px;
 }
 
 .destinations__examples {
@@ -648,8 +654,125 @@ svg {
         justify-content: center;
     }
 }
+/* ************************************* */
 
 
 
+/* Раздел About Us */
+
+.about-us {
+    --pad-inline: 15px;
+    padding-inline: var(--pad-inline);
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    margin-top: 120px;
+}
+.about-us__desc h2 {
+    margin-top: 86px;
+    margin-bottom: 32px;
+}
+.about-us__desc {
+    max-width: 556px;
+}
+.about-us__desc p {
+    line-height: 2;
+    color: #5B5B5B;
+}
+.about-us__view {
+    display: inline-block;
+    margin-top: 32px;
+    cursor: pointer;
+}
+.about-us img {
+    border-radius: 24px;
+}
+@media (max-width: 1081px) {
+    .about-us {
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+    .about-us__desc h2 {
+        margin-top: 0;
+    }
+}
+@media (max-width: 666px) {
+    .about-us img {
+        max-width: 400px;
+    }
+}
+@media (max-width: 463px) {
+    .about-us img {
+        max-width: 300px;
+    }
+}
+/* ************************************* */
+
+
+/* Подвал страницы */
+
+.footer {
+    font-size: 13px;
+    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #F9F9F9;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.footer__content {
+    color: #5B5B5B;
+}
+
+.footer__content li:not(:last-child) {
+    margin-bottom: 12px;
+}
+.footer__info {
+    max-width: 355px;
+}
+.footer__info p {
+    line-height: 2;
+}
+.footer__subscribe {
+    max-width: 388px;
+}
+.subscribe__form {
+    display: flex;
+    padding-left: 56px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.subscribe__label {
+    height: 100%;
+    flex-grow: 1;
+    padding-right: 16px;
+
+}
+.subscribe__form::before {
+    position: absolute;
+    content: "";
+    top: 24px;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("./../img/email.svg");
+
+    background-repeat: no-repeat;
+}
+.subscribe__form input {
+    width: 100%;
+}
+.subscribe__form .btn {
+    color: #fff;
+}
 
 /* ************************************* */
