@@ -7,7 +7,7 @@ body {
     color: #161414;
 }
 body.no-overflow {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .none {
     display: none;
