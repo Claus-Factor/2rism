@@ -775,29 +775,44 @@ svg {
 .footer__info p {
     line-height: 2;
 }
+.info__networks {
+    margin-top: 32px;
+    display: flex;
+    column-gap: 32px;
+}
 .footer__subscribe {
     max-width: 388px;
 }
+
+
+
 .subscribe__form {
     display: flex;
-    padding-left: 56px;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+
+
+    height: 60px;
 }
 .subscribe__label {
     height: 100%;
-    flex-grow: 1;
+    width: 100%;
+    padding-left: 56px;
     padding-right: 16px;
 
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.subscribe__form::before {
+.subscribe__label::before {
     position: absolute;
     content: "";
-    top: 24px;
+    top: 21px;
     left: 16px;
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 18px;
     display: inline-block;
     background-image: url("./../img/email.svg");
 
@@ -808,11 +823,6 @@ svg {
 }
 .subscribe__form .btn {
     color: #fff;
-}
-.info__networks {
-    margin-top: 32px;
-    display: flex;
-    column-gap: 32px;
 }
 
 /* ************************************* */
