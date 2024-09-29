@@ -104,6 +104,8 @@ body.no-overflow {
 }
 .user__avatar input[type="image"] {
     width: 48px;
+	height: 48px;
+	object-fit: cover;
     border-radius: 50%;
     z-index: 50;
 }
