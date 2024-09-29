@@ -1,10 +1,12 @@
 @import "./reset.css";
+@import "./animation.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Глобальная стилизация */
 body {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: #161414;
+    overflow-x: hidden;
 }
 body.no-overflow {
     /*overflow: hidden;*/
@@ -230,12 +232,12 @@ body.no-overflow {
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 370px;
+    max-width: 350px;
     height: 100vh;
     z-index: 1;
 
     padding-top: 100px;
-    padding-inline: 100px 100px;
+    padding-inline: 80px 100px;
 
     font-size: 25px;
     text-transform: capitalize;
@@ -330,9 +332,6 @@ body.no-overflow {
     }
 }
 @media (max-width: 490px) {
-    .header {
-        height: 950px;
-    }
     .header__title h1 {
         font-size: 36px;
     }
@@ -790,7 +789,6 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 
     height: 60px;
 }
