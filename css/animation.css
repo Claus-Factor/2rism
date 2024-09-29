@@ -28,6 +28,15 @@
         font-size: auto;
     }
 }
+@keyframes for-h2 {
+    from {
+        margin-left: -150px;
+        font-size: 18px;
+    }
+    to {
+        margin-left: initial;
+    }
+}
 
 
 /*
@@ -60,7 +69,6 @@
     font-weight: 600;
     padding: 24px 24px 24px 56px;
     border-radius: 12px;
-    
     position: relative;
 }
 */
@@ -68,4 +76,9 @@
     animation-name: for-btn;
     animation-duration: 2s;
     animation-timing-function: ease-in;
+}
+
+h2.h2-animation {
+    animation-name: for-h2;
+    animation-duration: 2s;
 }

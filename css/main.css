@@ -141,7 +141,7 @@ body.no-overflow {
 }
 .header__btn::before {
     position: absolute;
-    top: 26px;
+    top: calc((100% - 20px) / 2);
     left: 26px;
     content: "";
     display: inline-block;
