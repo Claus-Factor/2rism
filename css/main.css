@@ -333,14 +333,15 @@ body.no-overflow {
     .header {
         height: 950px;
     }
+    .header__title h1 {
+        font-size: 36px;
+    }
 }
 @media (max-width: 355px) {
     .header__form {
         max-width: 210px;
     }
-    .header__title h1 {
-        font-size: 36px;
-    }
+
 }
 
 
