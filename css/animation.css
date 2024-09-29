@@ -1,24 +1,48 @@
 @keyframes for-title {
     from {
-        font-size: 75px;
+        font-size: 150px;
         margin-bottom: 30px;
+        filter: opacity(0.1);
     }
     to {
         font-size: auto;
     }
 }
-@keyframes for-form {
-    from, 20% {
-        background: transparent;
+@keyframes for-title-content {
+    from {
+        margin-inline: -700px;
     }
     to {
-        background: auto;
+        
+    }
+}
+
+@media (min-width: 1275px) {
+    .header__title h1 {
+        animation: for-title;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+    .header__title {
+        animation: for-title-content;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes for-form {
+    from, 20% {
+        filter: opacity(0);
+    }
+    to {
+
     }
 }
 @keyframes for-btn {
     from {
         font-size: 9px;
         margin-bottom: 20px;
+        filter: opacity(0);
     }
     95% {
         font-size: 23px;
@@ -38,40 +62,12 @@
     }
 }
 
-
-/*
-.header__title h1 {
-    line-height: 1.3;
-    font-weight: 600;
-    font-size: 48px;
-    margin-bottom: 32px;
-}
-*/
-.header__title h1 {
-    animation: for-title;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-}
-.header__form,
-.header__form label::before {
+.header__form {
     animation: for-form;
     animation-duration: 2s;
     animation-timing-function: ease-in;
 }
-.header__form label::before {
-    animation-duration: 3s;
-}
-/*
-.header__btn {
-    background-color: #7B61FF;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 600;
-    padding: 24px 24px 24px 56px;
-    border-radius: 12px;
-    position: relative;
-}
-*/
+
 .header__btn {
     animation-name: for-btn;
     animation-duration: 2s;
@@ -81,4 +77,21 @@
 h2.h2-animation {
     animation-name: for-h2;
     animation-duration: 2s;
+}
+
+
+@keyframes for-about {
+    from {
+        column-gap: 250px;
+        filter: opacity(0.1);
+    }
+    to {
+        column-gap: 32px;
+    }
+}
+.about-us-animation {
+    animation-name: for-about;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }

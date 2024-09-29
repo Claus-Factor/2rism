@@ -22,3 +22,15 @@ observer.observe(document.querySelector('.h2_2'));
 observer.observe(document.querySelector('.h2_3'));
 observer.observe(document.querySelector('.h2_4'));
 observer.observe(document.querySelector('.h2_5'));
+
+const observer1 = new IntersectionObserver(entries => {
+  // перебор записей
+  entries.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      entry.target.classList.add('about-us-animation');
+    }
+  });
+});
+observer1.observe(document.querySelector('.about-us'));
